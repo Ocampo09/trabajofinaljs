@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presupuesto | Juan David Carpintero</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Juan David | Carpintero</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li class="active"><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Solicita tu Presupuesto</h1>
+    <form id="form-presupuesto">
+      <fieldset>
+        <legend>Datos de contacto</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" maxlength="15" required />
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" maxlength="40" required />
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" maxlength="9" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Presupuesto</legend>
+
+        <label for="producto">Producto:</label>
+        <select id="producto">
+          <option value="1000">Armario a medida - 1000€</option>
+          <option value="2000">Cocina completa - 2000€</option>
+          <option value="3000">Casa de madera - 3000€</option>
+        </select>
+
+        <label for="plazo">Plazo de entrega (días):</label>
+        <input type="number" id="plazo" value="30" min="1" />
+
+        <p>Extras:</p>
+        <label><input type="checkbox" class="extra" value="100" /> Envío a domicilio (+100€)</label><br />
+        <label><input type="checkbox" class="extra" value="200" /> Instalación (+200€)</label><br />
+        <label><input type="checkbox" class="extra" value="150" /> Material premium (+150€)</label>
+
+        <p><strong>Presupuesto estimado: <span id="resultado">0 €</span></strong></p>
+      </fieldset>
+
+      <label><input type="checkbox" id="condiciones" /> Acepto las condiciones de privacidad</label><br />
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Resetear</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Juan David Ocampo | Carpintero en Madrid</p>
+  </footer>
+
+  <script src="js/presupuesto.js"></script>
+</body>
+</html>

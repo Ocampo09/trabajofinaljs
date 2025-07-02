@@ -1,0 +1,159 @@
+/* Fuente limpia y moderna */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --color-principal: #8B4513;  /* marrón madera */
+  --color-secundario: #f4f1ee; /* fondo claro */
+  --color-acento: #cfa97e;     /* dorado madera */
+  --color-texto: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  line-height: 1.6;
+  padding-top: 80px; /* espacio para navbar fija */
+}
+
+header {
+  background-color: var(--color-principal);
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: background 0.3s;
+}
+
+.navbar li.active a,
+.navbar a:hover {
+  background-color: var(--color-acento);
+  color: #000;
+  border-radius: 4px;
+}
+
+main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: var(--color-principal);
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: var(--color-principal);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--color-acento);
+  color: #000;
+}
+
+#resultado {
+  font-size: 1.2rem;
+  color: var(--color-principal);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
