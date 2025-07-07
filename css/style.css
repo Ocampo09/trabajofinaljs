@@ -150,6 +150,12 @@ form button:hover {
   transform: scale(1.03);
 }
 
+ #mapa {
+  height: 400px;
+  width: 100%;
+  margin: 20px 0;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
   .navbar ul {
