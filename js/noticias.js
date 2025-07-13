@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("https://ocampo09.github.io/trabajofinaljs/data/noticias.json")
+    fetch("https:./data/noticias.json")
       .then((response) => response.json())
       .then((data) => {
         const contenedor = document.getElementById("contenedor-noticias");
