@@ -1,26 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("../data/noticias.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const contenedor = document.getElementById("contenedor-noticias");
-        data.forEach((noticia) => {
-          const noticiaDiv = document.createElement("div");
-          noticiaDiv.className = "noticia";
-  
-          const titulo = document.createElement("h3");
-          titulo.textContent = noticia.titulo;
-  
-          const contenido = document.createElement("p");
-          contenido.textContent = noticia.contenido;
-  
-          noticiaDiv.appendChild(titulo);
-          noticiaDiv.appendChild(contenido);
-          contenedor.appendChild(noticiaDiv);
-        });
-      })
-      .catch((error) => {
-        console.error("Error cargando las noticias:", error);
-      });
+ document.addEventListener("DOMContentLoaded", function () {
+  const data = [
+    {
+      titulo: "Nuevo proyecto de casa de madera en la sierra",
+      contenido: "Acabamos de finalizar una hermosa casa de madera en la Sierra de Madrid. Diseño rústico y sostenible."
+    },
+    {
+      titulo: "Incorporamos nuevos tipos de roble",
+      contenido: "Ahora trabajamos con roble blanco americano, ideal para cocinas y comedores."
+    },
+    {
+      titulo: "Ofertas en armarios empotrados",
+      contenido: "Durante este mes, obtén un 15% de descuento en armarios empotrados a medida."
+    }
+  ];
+
+  const contenedor = document.getElementById("contenedor-noticias");
+  data.forEach((noticia) => {
+    const noticiaDiv = document.createElement("div");
+    noticiaDiv.className = "noticia";
+
+    const titulo = document.createElement("h3");
+    titulo.textContent = noticia.titulo;
+
+    const contenido = document.createElement("p");
+    contenido.textContent = noticia.contenido;
+
+    noticiaDiv.appendChild(titulo);
+    noticiaDiv.appendChild(contenido);
+    contenedor.appendChild(noticiaDiv);
   });
-  
-  
+});
