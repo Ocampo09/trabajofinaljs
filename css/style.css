@@ -150,12 +150,16 @@ form button:hover {
   transform: scale(1.03);
 }
 
- #mapa {
-  height: 400px;
+.mapa {
   width: 100%;
-  margin: 20px 0;
+  height: 400px;
 }
 
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 /* Responsivo */
 @media (max-width: 768px) {
   .navbar ul {
@@ -198,3 +202,4 @@ form button:hover {
   font-style: italic;
   font-size: 1.2rem;
 }
+
